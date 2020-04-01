@@ -1,0 +1,22 @@
+version: '3.4'
+services:
+  iqfeed:
+    image: docker-ibc
+    container_name: ibc
+    ports:
+     - "4001:4004" # match first part with TWS_PORT:second part with socat proxy in supervisord.conf
+     - "8088:8080"
+     - "5901:5900"
+    environment:
+      TWS_USER: "CHANGEME"
+      TWS_PASSWORD: "CHANGEME"
+      TWS_PORT: "4001"
+      TWS_LIVE_PAPER: "paper" # live or paper
+    volumes:
+      - /var/log/ibc:/opt/ibc/logs
+    healthcheck:
+      test: ["CMD", "python3", "/root/is_ibgw_running.py"]
+      interval: 60s
+      timeout: 30s
+      retries: 5
+      start_period: 5m
