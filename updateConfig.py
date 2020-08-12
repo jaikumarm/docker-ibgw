@@ -13,10 +13,16 @@ def updateIbcConfig(configFile):
     else:
         raise Exception("ERROR: No IB Password Set")
 
+    if os.environ.get('TWS_PORT', False):
+        twsPort = os.environ['TWS_PORT']
+    else:
+        raise Exception("ERROR: No TWS PORT Set")
+
     with fileinput.FileInput(configFile, inplace=True) as file:
         for line in file:
             line = line.replace('{ib_user}', userName)
             line = line.replace('{ib_password}', userPassword)
+            line = line.replace('OverrideTwsApiPort=4001', 'OverrideTwsApiPort=%d' % int(twsPort))
             print(line, end='')
 
     return

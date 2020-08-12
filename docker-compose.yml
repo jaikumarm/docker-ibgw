@@ -1,16 +1,18 @@
 version: '3.4'
 services:
-  iqfeed:
+  ibc:
     image: docker-ibc
     container_name: ibc
+    restart: always
     ports:
-     - "4001:4004" # match first part with TWS_PORT:second part with socat proxy in supervisord.conf
+     - "4001:4004" # TWS_PORT:SOCAT_PROXY_PORT
      - "8088:8080"
      - "5901:5900"
     environment:
       TWS_USER: "CHANGEME"
       TWS_PASSWORD: "CHANGEME"
       TWS_PORT: "4001"
+      SOCAT_PROXY_PORT: "4004"
       TWS_LIVE_PAPER: "paper" # live or paper
     volumes:
       - /var/log/ibc:/opt/ibc/logs
