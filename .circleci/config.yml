@@ -1,0 +1,23 @@
+version: 2.1
+jobs:
+  build-and-push:
+    machine: true
+    steps:
+      - checkout
+      - run: |
+          docker build -t jaikumarm/ibgw:v978 -f Dockerfile .
+      - run: |
+          set -x
+          sh +x -c 'echo $DOCKER_PASS' | docker login -u=$DOCKER_USER --password-stdin
+          docker push jaikumarm/ibgw:v978
+          docker tag jaikumarm/ibgw:v978 jaikumarm/ibgw:latest
+          docker push jaikumarm/ibgw:latest
+
+workflows:
+  version: 2
+  build-and-push-image:
+    jobs:
+      - build-and-push:
+          filters:
+            branches:
+              only: master

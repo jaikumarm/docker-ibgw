@@ -1,5 +1,6 @@
 Dockerized IB Gateway and IBC with xvfb and novnc for remote viewing
 =======================
+[![CircleCI](https://circleci.com/gh/jaikumarm/docker-ibgw.svg?style=svg)](https://circleci.com/gh/jaikumarm/docker-ibgw)
 
 See [CHANGELOG](./CHANGELOG.md) for a list of notable changes
 
