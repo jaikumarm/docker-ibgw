@@ -1,8 +1,8 @@
 version: '3.4'
 services:
-  ibc:
-    image: docker-ibc
-    container_name: ibc
+  ibgw:
+    image: docker-ibgw
+    container_name: ibgw
     restart: always
     ports:
      - "4001:4004" # TWS_PORT:SOCAT_PROXY_PORT
@@ -15,7 +15,7 @@ services:
       SOCAT_PROXY_PORT: "4004"
       TWS_LIVE_PAPER: "paper" # live or paper
     volumes:
-      - /var/log/ibc:/opt/ibc/logs
+      - /var/log/ibgw:/opt/ibc/logs
     healthcheck:
       test: ["CMD", "python3", "/root/is_ibgw_running.py"]
       interval: 60s

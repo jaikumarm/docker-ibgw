@@ -22,8 +22,8 @@ if __name__ == "__main__":
     time.sleep(5)
 
     if not ib.isConnected():
-        logging.info('HEALTHCHECK: ib is not connected')
+        logging.debug('HEALTHCHECK: ib is not connected')
         sys.exit(1)
     else:
-        logging.info('HEALTHCHECK: ib is connected')
+        logging.debug('HEALTHCHECK: ib is connected')
         sys.exit(0)
