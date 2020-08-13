@@ -40,9 +40,15 @@ In docker logs of the container and you should see
 ...
 ```
 
-If you see `ib_insync.IBC DEBUG remove Client 10.` it means it all good.
+If you see `ib_insync.IBC DEBUG remove Client 10.` it means its all good.
 
 This is fairly a opinionated configuration based on my own needs, if you (don't) like it fork it!
+
+Thanks!
+-----
+Thanks to the two projects without which this repo will likely not exist!
+* https://github.com/IbcAlpha/IBC
+* https://github.com/erdewit/ib_insync
 
 Also some of the code is borrowed and/or inspired from in no particular order
 * https://github.com/canada4663/ib_insyncDocker
