@@ -26,8 +26,8 @@ RUN wget -q -O - https://github.com/novnc/noVNC/archive/v1.2.0.tar.gz | tar -xzv
 RUN wget -q -O - https://github.com/novnc/websockify/archive/v0.9.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.9.0 /root/novnc/utils/websockify
 
 # Set env vars for IBG/IBC
-ENV IBG_VERSION=978-stable \
-	IBC_VERSION=3.8.3 \
+ENV IBG_VERSION=981-stable \
+	IBC_VERSION=3.8.7 \
 	IBC_INI=/opt/ibc/config.ini \
 	IBC_PATH=/opt/ibc \
 	TWS_PATH=/root/Jts \
@@ -38,7 +38,7 @@ ENV IBG_VERSION=978-stable \
 # Install IBG
 RUN wget -q -O /tmp/ibgateway-standalone-linux-x64.sh https://download2.interactivebrokers.com/installers/ibgateway/stable-standalone/ibgateway-stable-standalone-linux-x64.sh && \
 	chmod u+x /tmp/ibgateway-standalone-linux-x64.sh && \
-	echo 'n\r' | sh /tmp/ibgateway-standalone-linux-x64.sh -c && \ 
+	echo '\n\r' | sh /tmp/ibgateway-standalone-linux-x64.sh -c && \ 
 	rm -f /tmp/ibgateway-standalone-linux-x64.sh
 
 # Install IBC

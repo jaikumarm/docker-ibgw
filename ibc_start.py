@@ -23,7 +23,7 @@ updateIbcConfig(ibcConfigFile)
 updateTwsConfig(twsConfigFile)
 
 ibc = ibcontroller.IBC(
-    twsVersion=978,
+    twsVersion=981,
     gateway=True,
     ibcPath=ibcPath,
     tradingMode=twsLiveorPaperMode,
