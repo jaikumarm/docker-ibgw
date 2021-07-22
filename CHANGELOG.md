@@ -4,8 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## 2020-08-12
-### 0.1 Release
+## 2021-07-22
+### 0.2 Release
 - IB Gateway version 981
 - IB Controller version 3.8.7
 
