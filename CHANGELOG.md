@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## 2021-07-22
 ### 0.2 Release
-- IB Gateway version 981
+- IB Gateway version 978
 - IB Controller version 3.8.7
 
 ## 2020-08-12
