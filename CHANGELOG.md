@@ -6,13 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## 2021-07-22
 ### 0.2 Release
-- IB Gateway version 978
+- IB Gateway version 981
 - IB Controller version 3.8.7
 
 ## 2020-08-12
 ### 0.1 Release
 - Base ubuntu image 20.04 with Xvfb, x11vnc, fluxbox and novnc
-- IB Gateway version 978
+- IB Gateway version 981
 - IB Controller version 3.8.3
 - noVNC version 1.2.0
 
