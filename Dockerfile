@@ -26,7 +26,7 @@ RUN wget -q -O - https://github.com/novnc/noVNC/archive/v1.2.0.tar.gz | tar -xzv
 RUN wget -q -O - https://github.com/novnc/websockify/archive/v0.9.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.9.0 /root/novnc/utils/websockify
 
 # Set env vars for IBG/IBC
-ENV IBG_VERSION=981-stable \
+ENV IBG_VERSION=984-latest \
 	IBC_VERSION=3.8.7 \
 	IBC_INI=/opt/ibc/config.ini \
 	IBC_PATH=/opt/ibc \
