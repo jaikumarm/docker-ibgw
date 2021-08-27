@@ -53,7 +53,7 @@ RUN wget -q -O /tmp/IBC.zip https://github.com/ibcalpha/ibc/releases/download/${
 RUN pip3 install ib_insync
 	
 ADD config.ini /opt/ibc/config.ini
-ADD jts.ini /root/Jts/jts.ini
+ADD jts.ini /opt/ibc/jts.ini
 ADD is_ibgw_running.py /root/is_ibgw_running.py
 ADD updateConfig.py /root/updateConfig.py
 ADD ibc_start.py /root/ibc_start.py
