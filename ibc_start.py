@@ -16,7 +16,7 @@ twsPath = os.getenv("TWS_PATH", "/root/Jts")
 twsLiveorPaperMode = os.getenv("TWS_LIVE_PAPER", "paper") # live or paper
 twsPort = os.getenv("TWS_PORT", "4001")
 ibcConfigFile = ibcPath + "/config.ini"
-twsConfigFile = twsPath + "/jts.ini"
+twsConfigFile = ibcPath + "/jts.ini"
 
 logger.info("Updating config files")
 updateIbcConfig(ibcConfigFile)
