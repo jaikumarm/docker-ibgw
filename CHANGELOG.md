@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 2022-12-04
+### 0.3 Release
+- IB Gateway version 1019
+- IB Controller version 3.15.2
+- noVNC version 1.3.0
+- websockify version 0.10.0
+
 ## 2021-08-25
 ### 0.2a Release
 - IB Gateway version 984

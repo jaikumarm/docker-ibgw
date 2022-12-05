@@ -5,12 +5,12 @@ jobs:
     steps:
       - checkout
       - run: |
-          docker build -t jaikumarm/ibgw:v984 -f Dockerfile .
+          docker build -t jaikumarm/ibgw:v1019 -f Dockerfile .
       - run: |
           set -x
           sh +x -c 'echo $DOCKER_PASS' | docker login -u=$DOCKER_USER --password-stdin
-          docker push jaikumarm/ibgw:v984
-          docker tag jaikumarm/ibgw:v984 jaikumarm/ibgw:latest
+          docker push jaikumarm/ibgw:v1019
+          docker tag jaikumarm/ibgw:v1019 jaikumarm/ibgw:latest
           docker push jaikumarm/ibgw:latest
 
 workflows:

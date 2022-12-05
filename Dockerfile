@@ -22,12 +22,12 @@ RUN dpkg --add-architecture i386 && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN wget -q -O - https://github.com/novnc/noVNC/archive/v1.2.0.tar.gz | tar -xzv -C /root/ && mv /root/noVNC-1.2.0 /root/novnc && ln -s /root/novnc/vnc_lite.html /root/novnc/index.html
-RUN wget -q -O - https://github.com/novnc/websockify/archive/v0.9.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.9.0 /root/novnc/utils/websockify
+RUN wget -q -O - https://github.com/novnc/noVNC/archive/v1.3.0.tar.gz | tar -xzv -C /root/ && mv /root/noVNC-1.3.0 /root/novnc && ln -s /root/novnc/vnc_lite.html /root/novnc/index.html
+RUN wget -q -O - https://github.com/novnc/websockify/archive/v0.10.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.10.0 /root/novnc/utils/websockify
 
 # Set env vars for IBG/IBC
-ENV IBG_VERSION=984-latest \
-	IBC_VERSION=3.8.7 \
+ENV IBG_VERSION=10.19.1h-stable \
+	IBC_VERSION=3.15.2 \
 	IBC_INI=/opt/ibc/config.ini \
 	IBC_PATH=/opt/ibc \
 	TWS_PATH=/root/Jts \
